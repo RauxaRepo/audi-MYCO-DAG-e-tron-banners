@@ -20,7 +20,8 @@ var imageArray = new Array(),
     thirdFrame = false,
     efSwitch = false,
     isMLP = false,
-    checkTimer;
+    checkTimer,
+    localCopy;
 
 var outer = document.getElementById("outer"),
     outer_background = outer.getElementsByClassName("background")[0],
@@ -40,7 +41,8 @@ var outer = document.getElementById("outer"),
     inner_headline = inner.getElementsByClassName("headline")[0],
     inner_headlineText = inner.getElementsByClassName("headline")[0],
     mLock = document.getElementsByClassName("modelLockup")[0],
-    endFrame_headCont = inner.getElementsByClassName("efHeadline_container")[0];
+    endFrame_headCont = inner.getElementsByClassName("efHeadline_container")[0],
+    localCopy = document.getElementById("headline_local_copy");
 
 var hoverCheck = false,
     disclaimerOne = false,
@@ -426,6 +428,7 @@ function animateFrameThree(){
             },"end");
             // var mLock = document.createElement("img");
             mLock.src = "etron_K_7x9.png";
+            localCopy.src = "2020_Audietron_Lower_LC_728x90.png";
             // mLock.classList.add("modelLockup");
 
             // logo_holder.after(mLock);
@@ -437,6 +440,7 @@ function animateFrameThree(){
                 cta.style.opacity = "1";
                 replay.style.display = "block";
                 replay.style.opacity = "1";
+                localCopy.style.opacity = "1";
 
                 replay.addEventListener("click", resetAll);
 
@@ -517,6 +521,7 @@ function resetAll() {
             resetElement(cta);
             resetElement(inner_headline);
             resetElement(replay);
+            resetElement(localCopy);
             TweenMax.set(mLock, {x: 350, opacity:1});
             // resetElement(mLock);
             resetElement(disclaimer);
