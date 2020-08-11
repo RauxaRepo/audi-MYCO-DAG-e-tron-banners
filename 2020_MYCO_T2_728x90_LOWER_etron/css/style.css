@@ -358,9 +358,9 @@ div {
 
 .modelLockup {
     max-width: 230px;
-    max-height:  30px;
-    top: 46px;
-    left: 728px;
+    max-height: 26px;
+    top: 40px;
+    left: 814px;
     position: absolute;
     display: block;
     opacity: 0;
